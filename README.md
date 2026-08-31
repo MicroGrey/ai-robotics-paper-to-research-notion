@@ -35,7 +35,7 @@ bash install.sh
 安装后，在 Codex 中发送：
 
 ```text
-使用 $ai-robotics-paper-to-research-notion 初始化我的 AI Robotics Research Hub
+paper2notion 初始化
 ```
 
 Codex 会在你当前连接的 Notion 工作区中创建或复用：
@@ -48,25 +48,43 @@ Codex 会在你当前连接的 Notion 工作区中创建或复用：
 
 如果已存在同名 Hub，它会优先复用并只补齐缺失组件，不会使用任何写死的页面或数据库 ID。初始化属于 Notion 外部写入，因此只会在你明确发送初始化指令后执行。
 
+## 触发指令：`paper2notion`
+
+日常使用直接输入 `paper2notion` 即可。最短写法：
+
+```text
+paper2notion <PDF / arXiv / project page URL>
+```
+
+默认含义是：中文精读 → 中文结构化详译 → 写入 Notion。
+
+完整的 `$ai-robotics-paper-to-research-notion` 是显式调用形式；当你想明确指定 skill 时使用，效果相同。
+
 ## 常用方式
 
 只做中文精读，不写 Notion：
 
 ```text
-使用 $ai-robotics-paper-to-research-notion 精读这篇论文：<PDF / arXiv / project page URL>
+paper2notion 只精读不入库：<PDF / arXiv / project page URL>
 ```
 
 精读、结构化详译并入库：
 
 ```text
-使用 $ai-robotics-paper-to-research-notion 精读并入库：<PDF / arXiv / project page URL>
+paper2notion <PDF / arXiv / project page URL>
 ```
 
 带着自己的研究问题读：
 
 ```text
-使用 $ai-robotics-paper-to-research-notion 精读并入库：<论文 URL>
+paper2notion <论文 URL>
 我关注的问题：这篇工作如何表示 action、是否闭环、wrist camera 是否真正建模了 view correspondence？
+```
+
+首次初始化 Notion 研究库：
+
+```text
+paper2notion 初始化
 ```
 
 查看版本：

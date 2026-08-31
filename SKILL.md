@@ -43,6 +43,15 @@ description: >
 - 论文入库 / paper2notion / 写入 Notion / 精读入库；
 - 中文翻译 / 全文详译 / 按原文章节翻译。
 
+推荐日常短指令是 `paper2notion`：
+
+- `paper2notion <论文 URL>`：默认执行精读、结构化详译并入库；
+- `paper2notion 只精读不入库：<论文 URL>`：只产出中文 Research Memo；
+- `paper2notion 初始化`：初始化或补齐 Notion 研究 Hub；
+- `paper2notion 当前版本`：只返回版本 label。
+
+完整的 `$ai-robotics-paper-to-research-notion` 是显式调用形式，语义与上述短指令相同。
+
 用户可能只给 arXiv、PDF、project page 或 GitHub URL。自动寻找缺失来源，不要求用户补齐。用户如果标注“我关注的问题”，优先围绕这些问题读；否则使用动态 research lens。
 
 模式选择：

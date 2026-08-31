@@ -85,4 +85,4 @@ ai_robotics_stage_dir=""
 echo "Installed ${AI_ROBOTICS_SKILL_NAME} to ${AI_ROBOTICS_TARGET_DIR}"
 echo "If Codex is already open and the skill does not appear, restart Codex."
 echo "First-time Notion setup prompt:"
-echo '  使用 $ai-robotics-paper-to-research-notion 初始化我的 AI Robotics Research Hub'
+echo '  paper2notion 初始化'
